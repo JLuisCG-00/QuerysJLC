@@ -29,3 +29,5 @@ WHERE
     T0."DocDate" >= {?1.Fecha_Ini}
     AND T0."DocDate" <= {?2.Fehca_Fin}
     AND T1."WTAmnt" > 0
+    AND T0."CANCELED" = 'N'
+Order By T0."DocDate", T0."NumAtCard"

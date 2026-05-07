@@ -15,7 +15,7 @@ SELECT
     T1.WTAmnt AS "Monto de Retencion",
     T2.WTName AS "Descripcion de Retencion",
     T2.Rate AS "Tasa de Retencion",
-    T0.DocTotal AS "Monto Base de Retencion",
+    T0.BaseAmnt AS "Monto Base de Retencion",
 
     -- Informacion Fiscal de Retencion
     T0.U_NFD AS "#Fiscal de retencion",

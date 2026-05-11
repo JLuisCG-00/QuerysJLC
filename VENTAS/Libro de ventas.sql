@@ -67,7 +67,7 @@ T0."DiscSum" as "Descuento"
 FROM OINV T0  
 LEFT JOIN OCTG T1 ON T0."GroupNum" = T1."GroupNum"
 
-WHERE T0."DocDate" BETWEEN {?1FechaInicial} AND {?2FechaFinal}
+WHERE T0."DocDate" BETWEEN [%0] AND [%1]
 AND T0."DocSubType"='--' 
 
 UNION ALL
@@ -147,7 +147,7 @@ T0."DiscSum" as "Descuento"
 
 FROM ORIN T0  
 LEFT JOIN OCTG T1 ON T0."GroupNum" = T1."GroupNum"
+ 
+WHERE T0."DocDate" BETWEEN [%0] AND [%1] AND T0.CANCELED =  'N'
 
-WHERE T0."DocDate" BETWEEN {?1FechaInicial} AND {?2FechaFinal}
-
-ORDER BY 1, "Series";
+ORDER BY 1, "Series"
